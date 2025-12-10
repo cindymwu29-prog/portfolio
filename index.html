@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cindy Williams Urena | Universe Portfolio</title>
+
+  <!-- Favicon (usa la imagen de mariposas) -->
+  <link rel="icon" href="butterflies.jpg" type="image/jpeg" />
+
   <link rel="stylesheet" href="style-universe.css" />
   <script src="script.js" defer></script>
 </head>
@@ -77,6 +81,7 @@
     <section class="section hover-section">
       <div class="section-title">PROJECTS</div>
       <div class="projects-grid">
+        <!-- QUOTIVA -->
         <div class="project-card">
           <div class="project-tag">iOS APP</div>
           <div class="project-title">Quotiva</div>
@@ -92,10 +97,20 @@
             <span class="pill">User Experience</span>
           </div>
           <div class="project-links">
-            <span class="coming-soon">Quotiva presentation coming soon…</span>
+            <a href="quotiva.html" class="project-link">View project details</a>
+          </div>
+          <div class="project-links">
+            <button
+              class="btn-ghost"
+              data-modal-target="quotiva-modal"
+              type="button"
+            >
+              View Quotiva presentation
+            </button>
           </div>
         </div>
 
+        <!-- ALOCI -->
         <div class="project-card">
           <div class="project-tag">WEB PLATFORM</div>
           <div class="project-title">ALOCI</div>
@@ -110,23 +125,25 @@
             <span class="pill">JavaScript</span>
             <span class="pill">Front-End Design</span>
           </div>
+          <div class="project-links">
+            <a href="aloci.html" class="project-link">View project details</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- BUTTERFLY / UNIVERSE GALLERY -->
+    <!-- VISUAL LANGUAGE / GALLERY -->
     <section class="section hover-section">
       <div class="section-title">VISUAL LANGUAGE</div>
       <p class="section-main-text">
         My work is inspired by <span class="highlight">transformation</span> and the
         idea that small changes can create big ripples—like a butterfly
-        reshaping a whole sky. Below you can replace these placeholders with your
-        own images of <strong>butterflies</strong>, <strong>galaxies</strong> or
-        any visual that represents your story.
+        reshaping a whole sky. Below you can showcase your own images of
+        <strong>butterflies</strong>, <strong>galaxies</strong> and visual metaphors
+        that represent your story.
       </p>
 
       <div class="gallery-grid">
-        <!-- Reemplaza los src con tus propias imágenes -->
         <div class="gallery-card">
           <div
             class="gallery-img"
@@ -221,6 +238,30 @@
     <footer>
       © <span id="year"></span> · Built by Cindy Williams Urena · Stars, butterflies & code.
     </footer>
+  </div>
+
+  <!-- MODAL PARA QUOTIVA PRESENTATION -->
+  <div id="quotiva-modal" class="modal-overlay">
+    <div class="modal">
+      <button class="modal-close" type="button" data-modal-close>&times;</button>
+      <h3>Quotiva Presentation</h3>
+      <p>
+        This is the presentation for my iOS project <strong>Quotiva</strong>.
+        It walks through the concept, features, screens and technical decisions
+        behind the app.
+      </p>
+      <a
+        href="Quotiva Presentation (1).pptx"
+        target="_blank"
+        class="btn-link modal-link"
+      >
+        Open presentation
+      </a>
+      <p class="modal-note">
+        If this file name changes in the repository, just update the
+        <code>href</code> here.
+      </p>
+    </div>
   </div>
 </body>
 </html>
