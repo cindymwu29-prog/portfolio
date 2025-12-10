@@ -68,6 +68,31 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.target === modal) {
         closeModal();
       }
+      document.addEventListener("DOMContentLoaded", () => {
+  const postImageInput = document.getElementById("postImage");
+  const imagePreview = document.getElementById("imagePreview");
+
+  if (postImageInput && imagePreview) {
+    postImageInput.addEventListener("change", (event) => {
+      const file = event.target.files[0];
+
+      if (!file) {
+        imagePreview.style.display = "none";
+        imagePreview.removeAttribute("src");
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        imagePreview.src = e.target.result;   // aquí se ve la imagen
+        imagePreview.style.display = "block";
+      };
+      reader.readAsDataURL(file); // lee la imagen del dispositivo del usuario
     });
   }
 });
+
+    });
+  }
+});
+
