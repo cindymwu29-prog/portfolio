@@ -3,7 +3,7 @@
 This repository contains my personal portfolio website.
 
 ## About
-This site showcases my programming projects and technical skills.
+The website showcases my programming projects, skills and experience as a software development student.
 
 ## Technologies
 HTML  
